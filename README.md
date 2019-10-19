@@ -5,7 +5,7 @@
 * [آموزش رایگان php](http://www.alefyar.com/php-oop-pdo-turorial-section1)
 ### مراحل نصب
 * یک فولدر ایجاد کنید
-* در خط فرمان تایپ کنید composer require abolfazl-talebi/laravel-tutorial
+* در خط فرمان تایپ کنید composer create-project abolfazl-talebi/laravel-tutorial
 * تمام فایلهای دوره برای شما در فولدر ایجاد شده قرار میگیرد
 * اکنون برای نصب پکیج های کامپوزر دستور زیر را وارد کنید
 * composer install
