@@ -34,7 +34,10 @@
                         <a class="nav-link" href="{{route('admin.categories')}}">دسته بندی ها</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/ui-features/typography.html">مطالب</a>
+                        <a class="nav-link" href="{{route('admin.articles')}}">مطالب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.comments')}}">نظرات</a>
                     </li>
                 </ul>
             </div>

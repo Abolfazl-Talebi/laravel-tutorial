@@ -33,6 +33,25 @@ Route::prefix('admin/categories')->middleware('checkrole')->group(function () {
 });
 
 
+Route::prefix('admin/articles')->middleware('checkrole')->group(function () {
+    Route::get('/', 'back\ArticleController@index')->name('admin.articles');
+    Route::get('/create', 'back\ArticleController@create')->name('admin.articles.create');
+    Route::post('/store', 'back\ArticleController@store')->name('admin.articles.store');
+    Route::get('/edit/{article}', 'back\ArticleController@edit')->name('admin.articles.edit');
+    Route::post('/update/{article}', 'back\ArticleController@update')->name('admin.articles.update');
+    Route::get('/destroy/{article}', 'back\ArticleController@destroy')->name('admin.articles.destroy');
+    Route::get('/status/{article}', 'back\ArticleController@updatestatus')->name('admin.articles.status');
+});
+
+Route::prefix('admin/comments')->middleware('checkrole')->group(function () {
+    Route::get('/', 'back\CommentController@index')->name('admin.comments');
+    Route::get('/edit/{comment}', 'back\CommentController@edit')->name('admin.comments.edit');
+    Route::post('/update/{comment}', 'back\CommentController@update')->name('admin.comments.update');
+    Route::get('/destroy/{comment}', 'back\CommentController@destroy')->name('admin.comments.destroy');
+    Route::get('/status/{comment}', 'back\CommentController@updatestatus')->name('admin.comments.status');
+});
+
+
 
 
 
@@ -45,3 +64,7 @@ Route::get('/', function () {
 
 Route::get('/profile/{user}', 'UserController@edit')->name('profile');
 Route::post('/update/{user}', 'UserController@update')->name('profileupdate');
+Route::get('/articles', 'front\ArticleController@index')->name('articles');
+Route::get('/article/{article}', 'front\ArticleController@show')->name('article');
+
+Route::post('/comment/{article}', 'front\CommentController@store')->name('comment.store');

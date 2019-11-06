@@ -40,7 +40,7 @@
 
                             <div class="form-group">
                                 <label for="title">نام مستعار - slug</label>
-                                <input type="slug" class="form-control @error('slug') is-invalid @enderror" name="slug"
+                                <input type="text" class="form-control @error('slug') is-invalid @enderror" name="slug"
                                     value="{{$category->slug}}">
                                 @error('slug')
                                 <div class="alert alert-danger">{{$message}}</div>

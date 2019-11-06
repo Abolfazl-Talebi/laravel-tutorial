@@ -9,9 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "abolfazl-talebi/laravel6-persian-lang": "^6.0",
+        "biscolab/laravel-recaptcha": "^4.0",
+        "cviebrock/eloquent-sluggable": "^6.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0"
+        "laravel/helpers": "^1.1",
+        "laravel/tinker": "^1.0",
+        "morilog/jalali": "3.*",
+        "unisharp/laravel-filemanager": "~1.8"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

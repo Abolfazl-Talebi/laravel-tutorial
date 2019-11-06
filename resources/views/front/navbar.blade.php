@@ -26,6 +26,7 @@
                 <li><a href="#services">خدمات</a></li>
                 <li><a href="#portfolio">نمونه کارها</a></li>
                 <li><a href="#team">تیم ما</a></li>
+                <li><a href="{{route('articles')}}">مطالب</a></li>
                 <li class="drop-down"><a href="">منوی کاربری</a>
                     <ul>
 

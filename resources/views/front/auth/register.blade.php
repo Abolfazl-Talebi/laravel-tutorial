@@ -13,7 +13,7 @@
 
 
 
-
+  @include('front.messages')
 
   <div class="d-flex justify-content-center">
     <form action="{{route('register')}}" method="POST">

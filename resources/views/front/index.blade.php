@@ -22,6 +22,9 @@
   <link href="{{url('/front/css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
   <link href="{{url('/front/css/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
 
+
+  {!! htmlScriptTagJsApi(['lang'=>'fa']) !!}
+
 </head>
 
 <body dir="rtl">
