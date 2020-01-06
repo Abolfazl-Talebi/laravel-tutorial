@@ -11,7 +11,7 @@
 |
 */
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::prefix('admin')->middleware('checkrole')->group(function () {
     Route::get('/', 'back\AdminController@index')->name('admin.index');
@@ -51,18 +51,26 @@ Route::prefix('admin/comments')->middleware('checkrole')->group(function () {
     Route::get('/status/{comment}', 'back\CommentController@updatestatus')->name('admin.comments.status');
 });
 
+Route::prefix('admin/portfolios')->middleware('checkrole')->group(function () {
+    Route::get('/', 'back\PortfolioController@index')->name('admin.portfolios');
+    Route::get('/create', 'back\PortfolioController@create')->name('admin.portfolios.create');
+    Route::post('/store', 'back\PortfolioController@store')->name('admin.portfolios.store');
+    Route::get('/edit/{portfolio}', 'back\PortfolioController@edit')->name('admin.portfolios.edit');
+    Route::post('/update/{portfolio}', 'back\PortfolioController@update')->name('admin.portfolios.update');
+    Route::get('/destroy/{portfolio}', 'back\PortfolioController@destroy')->name('admin.portfolios.destroy');
+    Route::get('/status/{portfolio}', 'back\PortfolioController@updatestatus')->name('admin.portfolios.status');
+});
 
 
 
 
+Route::get('/', 'front\HomeController@index')->name('home');
 
+// Route::get('/', function () {
+//     return view('front.main');
+// })->name('home');
 
-
-Route::get('/', function () {
-    return view('front.main');
-})->name('home');
-
-Route::get('/profile/{user}', 'UserController@edit')->name('profile');
+Route::get('/profile/{user}', 'UserController@edit')->name('profile')->middleware(['auth', 'verified']);
 Route::post('/update/{user}', 'UserController@update')->name('profileupdate');
 Route::get('/articles', 'front\ArticleController@index')->name('articles');
 Route::get('/article/{article}', 'front\ArticleController@show')->name('article');

@@ -42,53 +42,25 @@
                 </ul>
             </div>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
-                <i class="menu-icon typcn typcn-shopping-bag"></i>
-                <span class="menu-title">المانهای فرم</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
-                <i class="menu-icon typcn typcn-th-large-outline"></i>
-                <span class="menu-title">نمودارها</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-                <i class="menu-icon typcn typcn-bell"></i>
-                <span class="menu-title">جدولها</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="pages/icons/font-awesome.html">
-                <i class="menu-icon typcn typcn-user-outline"></i>
-                <span class="menu-title">آیکونها</span>
-            </a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                 <i class="menu-icon typcn typcn-document-add"></i>
-                <span class="menu-title">صفحات</span>
+                <span class="menu-title">ابزارها</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/samples/blank-page.html"> صفحه ی خالی </a>
+                        <a class="nav-link" href="{{route('admin.portfolios')}}"> نمونه کارها </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/samples/login.html"> ورود </a>
+                        <a class="nav-link" href="pages/samples/login.html"> سوالات متداول </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/samples/register.html"> ثبت نام </a>
+                        <a class="nav-link" href="pages/samples/register.html"> خدمات ما </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/samples/error-404.html"> 404 </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/samples/error-500.html"> 500 </a>
-                    </li>
+
                 </ul>
             </div>
         </li>
